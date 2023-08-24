@@ -1,3 +1,6 @@
+import Pages.AccordionAndTabsPage;
+import Pages.DialogBoxesPage1;
+import Pages.DialogBoxesPage2;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -8,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import Pages.Objects.Button;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,10 +64,51 @@ public class Tests extends TestBase{
         }
 
         homePage.dialogBox.click();
+        DialogBoxesPage1 dialogBoxesPage1 = new DialogBoxesPage1();
+        if(dialogBoxesPage1.isInitialized())
+        {
+            test.log(Status.INFO, "Home page is visible");
+        }
+        else
+        {
+            test.log(Status.INFO, "Home page is NOT visible");
+        }
+        dialogBoxesPage1.createAnAccount.click();
+        DialogBoxesPage2 dialogBoxesPage = new DialogBoxesPage2();
+        dialogBoxesPage.dialogBoxesPage2();
+
+
 
     }
 
+    @Test(description = "Validate second section")
+    public void validate2Section() {
+        ExtentTest test = report.createTest("Testing the Extent Reporter");
+        test.log(Status.INFO, "The test is started");
+        openUrl();
+        HomePage homePage = new HomePage();
+        if(homePage.isInitialized())
+        {
+            test.log(Status.INFO, "Home page is visible");
+        }
+        else
+        {
+            test.log(Status.INFO, "Home page is NOT visible");
+        }
+        homePage.tabs.click();
+        AccordionAndTabsPage accordionAndTabsPage = new AccordionAndTabsPage();
+        if(accordionAndTabsPage.isInitialized())
+        {
+            test.log(Status.INFO, "Home page is visible");
+        }
+        else
+        {
+            test.log(Status.INFO, "Home page is NOT visible");
+        }
+        accordionAndTabsPage.choose2Section.click();
 
+
+    }
     @AfterClass
     public static void endTest(){
 //        report.flush();

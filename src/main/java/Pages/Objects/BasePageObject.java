@@ -8,6 +8,8 @@ import common.TestBase;
 public class BasePageObject extends TestBase
 {
     private String name;
+    private String email;
+
     private String locator;
     private String value;
 

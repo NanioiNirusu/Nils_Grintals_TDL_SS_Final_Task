@@ -59,17 +59,30 @@ public class TestBase {
             String xpathLocator = locator.substring(6);
             return getDriver().findElement(By.xpath(xpathLocator));
         }
-        else if(locator.startsWith("css="))
-        {
-            String cssLocator = locator.substring(4);
-            return getDriver().findElement(By.cssSelector(cssLocator));
-        }
+
         else if(locator.startsWith("class="))
         {
             String classLocator = locator.substring(6);
             return getDriver().findElement(By.className(classLocator));
         }
-        else return null;
+        else if(locator.startsWith("css=b"))
+        {
+            driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+            String cssLocator = locator.substring(4);
+            WebElement element = driver.findElement(By.cssSelector(cssLocator));
+            driver.switchTo().defaultContent();
+            return element;
+        }
+        else if(locator.startsWith("css="))
+        {
+            String cssLocator = locator.substring(4);
+            return getDriver().findElement(By.cssSelector(cssLocator));
+        }
+        else
+        {
+            throw new IllegalArgumentException("Invalid locator: " + locator);
+        }
     }
+
 
 }

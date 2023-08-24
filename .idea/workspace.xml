@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1adc951-0a64-49cf-8c3f-e3b1af93edb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestNg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/BasePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/Button.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/TextField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/configs/extentreports/spark-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/drivers/LICENSE.chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/drivers/chromedriver.exe" afterDir="false" />
+    <list default="true" id="d1adc951-0a64-49cf-8c3f-e3b1af93edb7" name="Changes" comment="Second">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/AccordionAndTabsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/BasePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/TextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/TextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/common/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
@@ -28,13 +25,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NanioiNirusu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="cba39c1b-0c1d-4d67-8cd6-205ce125c08a" />
+        <option name="url" value="https://github.com/NanioiNirusu/Nils_Grintals_TDL_SS_Final_Task.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -52,7 +63,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/nani/IdeaProjects/Nils_Grintals_TDL_SS_Final_Task/src/main/resources/configs",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Pina/Desktop/Java/Lesson_5_Page_Object_model after the Lesson 9",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "shared-indexes"
   }
 }]]></component>
@@ -66,7 +81,20 @@
       <recent name="Pages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.Tests.validate2Section">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Nils_Grintals_TDL_SS_Final_Task" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Nils_Grintals_TDL_SS_Final_Task" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests.createAUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="lesson5" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,8 +107,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests.validate2Section" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="lesson5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="validate2Section" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Tests.validate2Section" />
         <item itemvalue="TestNG.Tests.createAUser" />
       </list>
     </recent_temporary>

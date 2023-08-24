@@ -14,9 +14,6 @@ public class Link extends BasePageObject
     public void click()
     {
         WebElement link = getWebElement(getLocator());
-        link.sendKeys(Keys.DOWN);
-        System.out.println(link);
-
         link.click();
         System.out.println("Link " + getName() + " was clicked");
     }

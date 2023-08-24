@@ -1,6 +1,7 @@
 package Pages;
 
 
+import Pages.Objects.Button;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,9 @@ import Pages.Objects.Link;
 
     public class HomePage
     {
-        public Link dialogBox = new Link("Dialog Box", "xpath=//*[@id='post-2715']/div[2]/div/div/div[2]/div[1]/ul/li[6]/a");
+        public Button dialogBox = new Button("Dialog Box", "xpath=//*[@id='post-2715']/div[2]/div/div/div[2]/div[1]/ul/li[6]/a");
+
+        public Button tabs = new Button("Tabs", "xpath=//a[@class='button tiny_button button_pale regular_text' and text()='Tabs']");
 
         /*public HomePage(WebDriver driver)
         {
@@ -36,7 +39,7 @@ import Pages.Objects.Link;
         }*/
         public boolean isInitialized()
         {
-            return dialogBox.isLinkPresent();
+            return dialogBox.isButtonPresent();
         }
     }
 
