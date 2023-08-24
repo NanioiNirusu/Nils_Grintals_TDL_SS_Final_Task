@@ -7,6 +7,7 @@ import common.TestBase;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -79,7 +80,7 @@ public class Tests extends TestBase{
         dialogBoxesPage1.createAnAccount.click();
         DialogBoxesPage2 dialogBoxesPage = new DialogBoxesPage2();
         dialogBoxesPage.dialogBoxesPage2();
-
+        Assert.assertEquals(getValue(newUser), "Nils Grintals");
 
 
     }

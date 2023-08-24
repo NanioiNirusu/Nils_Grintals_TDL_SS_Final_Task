@@ -12,6 +12,9 @@ public class DialogBoxesPage1
 {
     public Button createAnAccount = new Button("Create an account", "css=body #create-user");
 
+
+    @FindBy(xpath ="//table[@id='users']//td[contains(text(),'Nils Grintals']")
+    public WebElement newUser;
     /*public HomePage(WebDriver driver)
     {
         PageFactory.initElements(driver, this);

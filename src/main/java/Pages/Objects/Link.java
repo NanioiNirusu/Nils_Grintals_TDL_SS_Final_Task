@@ -11,6 +11,7 @@ public class Link extends BasePageObject
         super(name, locator);
     }
 
+
     public void click()
     {
         WebElement link = getWebElement(getLocator());

@@ -1,0 +1,4 @@
+6.1. You can run one test if you click the runbutton by the @Test method initialization. You can also run one test from the top dropdown menu. You can also run one test by modiffying the testNG file and running it through that file.
+6.2. N/A
+6.3. By modifying the TestNg file and creating test groups.
+6.4. N/A
