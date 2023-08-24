@@ -1,11 +1,10 @@
-import Pages.AccordionAndTabsPage;
-import Pages.DialogBoxesPage1;
-import Pages.DialogBoxesPage2;
+import Pages.*;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import common.TestBase;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -15,7 +14,6 @@ import Pages.Objects.Button;
 
 import java.io.File;
 import java.io.IOException;
-import Pages.HomePage;
 
 
 public class Tests extends TestBase{
@@ -64,14 +62,19 @@ public class Tests extends TestBase{
         }
 
         homePage.dialogBox.click();
+//        GoogleVignette googleVignette = new GoogleVignette();
+//        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//        jsExecutor.executeScript("arguments[0].style.display = 'none';", clickClose);
+//        googleVignette.clickClose.click();
+
         DialogBoxesPage1 dialogBoxesPage1 = new DialogBoxesPage1();
         if(dialogBoxesPage1.isInitialized())
         {
-            test.log(Status.INFO, "Home page is visible");
+            test.log(Status.INFO, "DialogBoxes1 page is visible");
         }
         else
         {
-            test.log(Status.INFO, "Home page is NOT visible");
+            test.log(Status.INFO, "DialogBoxes1 page is NOT visible");
         }
         dialogBoxesPage1.createAnAccount.click();
         DialogBoxesPage2 dialogBoxesPage = new DialogBoxesPage2();
@@ -83,7 +86,28 @@ public class Tests extends TestBase{
 
     @Test(description = "Validate second section")
     public void validate2Section() {
-        ExtentTest test = report.createTest("Testing the Extent Reporter");
+        ExtentTest test = report.createTest("Testing the second section validation");
+        test.log(Status.INFO, "The test is started");
+        openUrl();
+        HomePage homePage = new HomePage();
+        if (homePage.isInitialized()) {
+            test.log(Status.INFO, "Home page is visible");
+        } else {
+            test.log(Status.INFO, "Home page is NOT visible");
+        }
+        homePage.tabs.click();
+        AccordionAndTabsPage accordionAndTabsPage = new AccordionAndTabsPage();
+        if (accordionAndTabsPage.isInitialized()) {
+            test.log(Status.INFO, "AccordionAndTabs page is visible");
+        } else {
+            test.log(Status.INFO, "AccordionAndTabs page is NOT visible");
+        }
+        accordionAndTabsPage.choose2Section.click();
+    }
+
+    @Test(description = "RGB value converter")
+    public void rgbConverter() {
+        ExtentTest test = report.createTest("Testing the RGB value convertion");
         test.log(Status.INFO, "The test is started");
         openUrl();
         HomePage homePage = new HomePage();
@@ -95,20 +119,22 @@ public class Tests extends TestBase{
         {
             test.log(Status.INFO, "Home page is NOT visible");
         }
-        homePage.tabs.click();
-        AccordionAndTabsPage accordionAndTabsPage = new AccordionAndTabsPage();
-        if(accordionAndTabsPage.isInitialized())
-        {
-            test.log(Status.INFO, "Home page is visible");
+        homePage.progressBar.click();
+        ProgressBarPage progressBarPage = new ProgressBarPage();
+        if (progressBarPage.isInitialized1()) {
+            test.log(Status.INFO, "AccordionAndTabs page is visible");
+        } else {
+            test.log(Status.INFO, "AccordionAndTabs page is NOT visible");
         }
-        else
-        {
-            test.log(Status.INFO, "Home page is NOT visible");
-        }
-        accordionAndTabsPage.choose2Section.click();
+        progressBarPage.chooseRPB.click();
+
+        progressBarPage.randomColour.click();
+
+        progressBarPage.randomDeterminate.click();
 
 
     }
+
     @AfterClass
     public static void endTest(){
 //        report.flush();

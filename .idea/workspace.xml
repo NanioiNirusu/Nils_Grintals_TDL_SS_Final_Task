@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1adc951-0a64-49cf-8c3f-e3b1af93edb7" name="Changes" comment="Second">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/AccordionAndTabsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d1adc951-0a64-49cf-8c3f-e3b1af93edb7" name="Changes" comment="fifth">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/GoogleVignette.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/ProgressBarPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/AccordionAndTabsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/AccordionAndTabsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/BasePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/TextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/TextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/common/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
@@ -47,6 +43,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -68,7 +67,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "shared-indexes"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -81,7 +80,7 @@
       <recent name="Pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Tests.validate2Section">
+  <component name="RunManager" selected="TestNG.Tests.rgbConverter">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Nils_Grintals_TDL_SS_Final_Task" />
       <method v="2">
@@ -95,11 +94,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="lesson5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests.createAUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="lesson5" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Tests" />
       <option name="METHOD_NAME" value="createAUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.rgbConverter" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="lesson5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="rgbConverter" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,8 +143,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Tests.validate2Section" />
+        <item itemvalue="TestNG.Tests.rgbConverter" />
         <item itemvalue="TestNG.Tests.createAUser" />
+        <item itemvalue="TestNG.Tests" />
+        <item itemvalue="TestNG.Tests.validate2Section" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692794538076</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fifth">
+      <option name="closed" value="true" />
+      <created>1692867402500</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692867402500</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -164,6 +196,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second" />
+    <MESSAGE value="fifth" />
+    <option name="LAST_COMMIT_MESSAGE" value="fifth" />
   </component>
 </project>

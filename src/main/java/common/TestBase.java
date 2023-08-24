@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -18,13 +19,16 @@ public class TestBase {
     private static WebDriver driver;
 
 
-    public WebDriver getDriver(){
-        if(this.driver==null){
+    public WebDriver getDriver()
+    {
+        if(this.driver == null)
+        {
             System.setProperty("webdriver.chrome.driver", "src" + File.separator + "main" + File.separator + "resources" + File.separator + "drivers" + File.separator + "chromedriver.exe");
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--load-extension=C:\\extensions\\uBlock-Origin");
+            driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
         }
         return this.driver;
     }
@@ -67,12 +71,21 @@ public class TestBase {
         }
         else if(locator.startsWith("css=b"))
         {
-            driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+            driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[data-src*='modal-form.html']")));
             String cssLocator = locator.substring(4);
+            System.out.println(cssLocator);
             WebElement element = driver.findElement(By.cssSelector(cssLocator));
             driver.switchTo().defaultContent();
             return element;
         }
+
+//        else if(locator.startsWith("css=b")) {
+//            driver.switchTo().frame(driver.findElement(By.cssSelector("css=iframe.demo-frame")));
+//            String cssLocator = locator.substring(4);
+//            WebElement element = driver.findElement(By.cssSelector(cssLocator));
+//            return element;
+//
+//        }
         else if(locator.startsWith("css="))
         {
             String cssLocator = locator.substring(4);
