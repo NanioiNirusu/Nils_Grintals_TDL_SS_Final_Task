@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1adc951-0a64-49cf-8c3f-e3b1af93edb7" name="Changes" comment="sixth">
+    <list default="true" id="d1adc951-0a64-49cf-8c3f-e3b1af93edb7" name="Changes" comment="seventh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/AccordionAndTabsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/AccordionAndTabsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/DialogBoxesPage2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Objects/Link.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/common/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
@@ -82,7 +76,7 @@
       <recent name="Pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Tests.createAUser">
+  <component name="RunManager" selected="TestNG.Tests.validate2Section">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Nils_Grintals_TDL_SS_Final_Task" />
       <method v="2">
@@ -145,10 +139,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Tests.validate2Section" />
         <item itemvalue="TestNG.Tests.createAUser" />
         <item itemvalue="TestNG.Tests.rgbConverter" />
         <item itemvalue="TestNG.Tests" />
-        <item itemvalue="TestNG.Tests.validate2Section" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692891733838</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="seventh">
+      <option name="closed" value="true" />
+      <created>1693129413177</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693129413177</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -216,6 +218,7 @@
     <MESSAGE value="Second" />
     <MESSAGE value="fifth" />
     <MESSAGE value="sixth" />
-    <option name="LAST_COMMIT_MESSAGE" value="sixth" />
+    <MESSAGE value="seventh" />
+    <option name="LAST_COMMIT_MESSAGE" value="seventh" />
   </component>
 </project>

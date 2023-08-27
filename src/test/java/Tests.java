@@ -14,6 +14,7 @@ import Pages.Objects.Button;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 
 public class Tests extends TestBase{
@@ -69,7 +70,7 @@ public class Tests extends TestBase{
 
         DialogBoxesPage1 dialogBoxesPage1 = new DialogBoxesPage1();
 
-        switchDriver("iframe[data-src*='modal-form.html']");
+        switchDriverCss("iframe[data-src*='modal-form.html']");
         if(dialogBoxesPage1.isInitialized())
         {
             test.log(Status.INFO, "DialogBoxes1 page is visible");
@@ -100,13 +101,18 @@ public class Tests extends TestBase{
             test.log(Status.INFO, "Home page is NOT visible");
         }
         homePage.tabs.click();
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        homePage.tabs.click();
+
         AccordionAndTabsPage accordionAndTabsPage = new AccordionAndTabsPage();
+        switchDriverClass("demo-frame lazyloaded");
         if (accordionAndTabsPage.isInitialized()) {
             test.log(Status.INFO, "AccordionAndTabs page is visible");
         } else {
             test.log(Status.INFO, "AccordionAndTabs page is NOT visible");
         }
         accordionAndTabsPage.choose2Section.click();
+
     }
 
     @Test(description = "RGB value converter")

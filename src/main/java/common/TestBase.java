@@ -34,8 +34,13 @@ public class TestBase {
         return this.driver;
     }
 
-    public WebDriver switchDriver(String locator){
+    public WebDriver switchDriverCss(String locator){
         driver.switchTo().frame(driver.findElement(By.cssSelector(locator)));
+        return driver;
+    }
+
+    public WebDriver switchDriverClass(String locator){
+        driver.switchTo().frame(driver.findElement(By.className(locator)));
         return driver;
     }
 
