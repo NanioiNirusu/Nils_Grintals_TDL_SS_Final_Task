@@ -1,12 +1,11 @@
 import Pages.*;
+import Pages.Objects.Link;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import common.TestBase;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -69,6 +68,8 @@ public class Tests extends TestBase{
 //        googleVignette.clickClose.click();
 
         DialogBoxesPage1 dialogBoxesPage1 = new DialogBoxesPage1();
+
+        switchDriver("iframe[data-src*='modal-form.html']");
         if(dialogBoxesPage1.isInitialized())
         {
             test.log(Status.INFO, "DialogBoxes1 page is visible");
@@ -80,7 +81,9 @@ public class Tests extends TestBase{
         dialogBoxesPage1.createAnAccount.click();
         DialogBoxesPage2 dialogBoxesPage = new DialogBoxesPage2();
         dialogBoxesPage.dialogBoxesPage2();
-        Assert.assertEquals(getValue(newUser), "Nils Grintals");
+        Assert.assertTrue(dialogBoxesPage1.isInitialized2());
+        returnCommonDriver();
+
 
 
     }

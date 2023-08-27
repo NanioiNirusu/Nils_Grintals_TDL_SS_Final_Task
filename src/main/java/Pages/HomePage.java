@@ -15,6 +15,8 @@ import Pages.Objects.Link;
         public Button tabs = new Button("Tabs", "xpath=//a[@class='button tiny_button button_pale regular_text' and text()='Tabs']");
         public Button progressBar = new Button("Tabs", "xpath=//a[@class='button tiny_button button_pale regular_text' and text()='ProgressBar']");
 
+        public Button dropdown = new Button("Tabs", "id=mobile_menu_toggler");
+
 
         /*public HomePage(WebDriver driver)
         {

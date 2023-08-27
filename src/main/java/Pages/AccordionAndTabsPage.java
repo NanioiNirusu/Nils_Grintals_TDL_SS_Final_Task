@@ -4,7 +4,7 @@ import Pages.Objects.Button;
 
 public class AccordionAndTabsPage {
 
-    public Button choose2Section = new Button("Choose the second section", "xpath=//h3[@class='ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons' and text()='Section 2']");
+    public Button choose2Section = new Button("Choose the second section", "id='ui-id-3'");
 
     public boolean isInitialized()
     {

@@ -23,4 +23,6 @@ public class Link extends BasePageObject
         WebElement link = getWebElement(getLocator());
         return link.isDisplayed();
     }
+
+
 }

@@ -1,5 +1,6 @@
 package common;
 
+import Pages.DialogBoxesPage1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,17 @@ public class TestBase {
         return this.driver;
     }
 
+    public WebDriver switchDriver(String locator){
+        driver.switchTo().frame(driver.findElement(By.cssSelector(locator)));
+        return driver;
+    }
+
+    public WebDriver returnCommonDriver(){
+        getDriver().switchTo().defaultContent();
+        return driver;
+
+    }
+
     public ConfigFileReader getConfig()
     {
         return this.configFileReader;
@@ -45,9 +57,7 @@ public class TestBase {
 
     public WebElement getWebElement(String locator)
     {
-        //#signInButton in devtools
-        //signInButton in code in previous lessons
-        //"id=signInButton" the way we will use the locators now
+
         if(locator.startsWith("id="))
         {
             String idLocator = locator.substring(3);
@@ -69,22 +79,9 @@ public class TestBase {
             String classLocator = locator.substring(6);
             return getDriver().findElement(By.className(classLocator));
         }
-        else if(locator.startsWith("css=b"))
-        {
-            driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[data-src*='modal-form.html']")));
-            String cssLocator = locator.substring(4);
-            System.out.println(cssLocator);
-            WebElement element = driver.findElement(By.cssSelector(cssLocator));
-            driver.switchTo().defaultContent();
-            return element;
-        }
 
-//        else if(locator.startsWith("css=b")) {
-//            driver.switchTo().frame(driver.findElement(By.cssSelector("css=iframe.demo-frame")));
-//            String cssLocator = locator.substring(4);
-//            WebElement element = driver.findElement(By.cssSelector(cssLocator));
-//            return element;
-//
+
+
 //        }
         else if(locator.startsWith("css="))
         {
